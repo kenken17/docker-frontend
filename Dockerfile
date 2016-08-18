@@ -12,4 +12,8 @@ RUN apt-get install -y nodejs
 # Pull down npm pakcages
 RUN npm install -g grunt-cli karma jasmine
 
-RUN mkdir /Users/root -p
+# Make a directry for deployment
+RUN mkdir /var/www -p
+
+# Switch to the working directory
+WORKDIR /var/www
