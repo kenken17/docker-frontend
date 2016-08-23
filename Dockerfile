@@ -16,14 +16,6 @@ RUN curl -sL https://deb.nodesource.com/setup_6.x | bash && \
 # Set the node path
 RUN PATH=/usr/bin/node:$PATH
 
-#Get Python pip
-RUN apt-get install python-pip python-dev build-essential -y && \
-	pip install --upgrade pip && \
-	pip install --upgrade virtualenv
-
-# Get Ansible Tower Cli
-RUN pip install ansible-tower-cli
-
 # Pull down some npm pakcages
 RUN npm install -g grunt-cli karma-cli jasmine jasmine-core
 
