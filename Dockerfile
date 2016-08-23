@@ -19,7 +19,7 @@ RUN PATH=/usr/bin/node:$PATH
 #Get Python pip
 RUN apt-get install python-pip python-dev build-essential -y && \
 	pip install --upgrade pip && \
-	sudo pip install --upgrade virtualenv
+	pip install --upgrade virtualenv
 
 # Get Ansible Tower Cli
 RUN pip install ansible-tower-cli
